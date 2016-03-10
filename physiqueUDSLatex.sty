@@ -114,3 +114,47 @@
 \usepackage{subcaption}
 \addto\captionsfrench{\def\figurename{{\sc Figure}}}
 \addto\captionsfrench{\def\tablename{{\sc Tableau}}}
+
+
+
+%Pour insérer du code pis que ce soit beau
+\usepackage{xcolor}				%permet de créer des couleurs personnalisés
+\definecolor{bleu}{RGB}{184,212,222}		
+\definecolor{gris}{RGB}{70,77,79}
+\definecolor{VertCommantaire}{rgb}{0,0.6,0}
+\definecolor{MauveChaine}{rgb}{0.58,0,0.82}
+
+
+\usepackage[most]{tcolorbox}
+
+
+\newcounter{pythoncode}							%Cré un nouveau compteur pour les blocs de pythoncode (ajouter [section] pour permettre de reset le compteur à toutes les sections
+\newtcblisting{pythoncode}[2][]{			%Permet de placer du code dans le texte pis que ce sois beau
+	phantom={\stepcounter{pythoncode}}				%"phantom" execute un segmant de code. "\stepcounter" permet d'incrémenter le compteur
+	enhanced,							%Permet de faire des choses plus cool
+	breakable,
+	title={Code \thepythoncode\hspace{20 mm}\textit{#2} },				%Le titre sera "Code " suivi du compteur suivi du paramètre passé
+	colframe=blue!50!black, 					%Le comptour sera de cette couleur (bleu foncé)
+	colback=blue!10!white, 						%Le derière sera de cette couleur (bleu pale)
+	fonttitle=\ttfamily,						%La police d'écriture
+	coltitle=white,							%Couleur du titre (blanc)
+	%boxed title style={size=small, colback=blue!75!black},
+	width=\linewidth,						%La longueur de la boite est de la longueur de la ligne
+	left=6mm,							%espacement entre le bord et les numéro de ligne (6mm)
+	listing only,
+	drop shadow,
+	listing options={						%Instructions transmises au truc qui place les lignes de codes
+		language=Python,					%Language de programation
+		basicstyle=\ttfamily\footnotesize,			%Le style de l'écriture (petit carachtère)
+		numbers =left,						%Afficher des numéros de lignes à gauche
+		numberstyle=\color{gris},				%Couleur des numéros de ligne
+		commentstyle=\color{VertCommantaire},			%Couleur des commantaires python
+		inputencoding=utf8,					%Encodage utilisé
+		keywordstyle=\color{blue},
+		%identifierstyle=\color{orange},
+		showspaces=false,              				% show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+		showstringspaces=false,       				% underline spaces within strings only
+		showtabs=false,               				% show tabs within strings adding particular underscores
+		stringstyle=\color{MauveChaine},
+		escapechar=|,},						%Pour entré du code LaTeX entrer le caractère "|"
+	}							%met de l'ombre derrière la boîte
