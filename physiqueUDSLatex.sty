@@ -89,7 +89,7 @@
 
 \newcounter{pythoncode}							%Cré un nouveau compteur pour les blocs de pythoncode (ajouter [section] pour permettre de reset le compteur à toutes les sections
 \newtcblisting{pythoncode}[2][]{			%Permet de placer du code dans le texte pis que ce sois beau
-	phantom={\stepcounter{pythoncode}}				%"phantom" execute un segmant de code. "\stepcounter" permet d'incrémenter le compteur
+	phantom={\stepcounter{pythoncode}},				%"phantom" execute un segmant de code. "\stepcounter" permet d'incrémenter le compteur
 	enhanced,							%Permet de faire des choses plus cool
 	breakable,
 	title={Code \thepythoncode\hspace{20 mm}\textit{#2} },				%Le titre sera "Code " suivi du compteur suivi du paramètre passé
