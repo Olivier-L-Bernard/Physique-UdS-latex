@@ -1,5 +1,17 @@
 \usepackage[T1]{fontenc}      % un second package
 \usepackage[top=2cm, bottom=2cm, left=2cm,right=2cm]{geometry}		%pour les marges
+
+%Trucs qu'il faut utiliser parce qu'on don't "Speak White"
+\usepackage[utf8]{inputenc} % latin1        % Suppport de Latex pour les accents
+\usepackage[french]{babel}                  % Support du pdf pour les accents
+
+\usepackage{caption}					%Permet de placer des libellés sous les tableaux, Figure, etc
+\usepackage{subcaption}					%Permet de placer des sous-libellés dans des sous-figures, etc
+\addto\captionsfrench{\def\figurename{{\sc Figure}}}	%Change le libellé de Figure à Figure ...
+\addto\captionsfrench{\def\tablename{{\sc Tableau}}}	%Change le libellé de Table à Tableau
+
+
+
 \usepackage{setspace}							%pour les interlignes
 
 
@@ -7,13 +19,8 @@
 \usepackage{amsmath,amssymb,bm,upgreek}
 \usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\addto\captionsfrench{\def\figurename{{\sc Figure}}}
-\addto\captionsfrench{\def\tablename{{\sc Tableau}}}
 
-\usepackage[utf8]{inputenc} % latin1        % Suppport de Latex pour les accents
-\usepackage[french]{babel}                  % Support du pdf pour les accents
+
 
 
 %Truc pour faire des pages titres de bad ass parceque je suis un bad ass parce que c'est super bad ass
