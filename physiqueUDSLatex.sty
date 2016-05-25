@@ -113,13 +113,13 @@
 		stringstyle=\color{MauveChaine},
 		escapechar=|,},						%Pour entré du code LaTeX entrer le caractère "|"
 	}
-\newtcolorbox{sortie}{
+\newtcolorbox{sortie}[2]{
 	enhanced,
-	title=Sharp corners,
+	title=Résultat \textit{#2},
 	fonttitle=\bfseries,
 	boxsep=5pt,
 	arc=8pt,
-	sharp corners=downhill,
+	sharp corners=uphill,
 	borderline={2pt}{0pt}{blue},
 	borderline={0.5pt}{-3pt}{blue,dotted},
 	borderline={0.5pt}{-6pt}{blue}
