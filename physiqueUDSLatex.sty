@@ -113,12 +113,14 @@
 		stringstyle=\color{MauveChaine},
 		escapechar=|,},						%Pour entré du code LaTeX entrer le caractère "|"
 	}
-\newtcolorbox{sortie}[2]{
+\newtcolorbox{sortie}[1]{
 	enhanced,
-	title=Résultat \textit{#2},
+	title=Résultat \textit{#1},
 	fonttitle=\bfseries,
 	boxsep=5pt,
-	arc=8pt,
+	arc=15pt,
+	colframe=blue		, 					%Le comptour sera de cette couleur
+	colback=blue!10!white, 						%Le derière sera de cette couleur (bleu pale)
 	sharp corners=uphill,
 	borderline={2pt}{0pt}{blue},
 	borderline={0.5pt}{-3pt}{blue,dotted},
